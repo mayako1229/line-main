@@ -4,12 +4,21 @@
   <meta charset="UTF-8" />
   <title>サンタクロース</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" >
+  <link rel="stylesheet" href="css/style.css" >
   <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+      <div class="settings">
+      <form action="#">
+        <p>初期設定</p>
+        <p><label for="child_name">おなまえ</label><input type="text" name="child_name" id="child_name" required></p>
+        <p><label for="message">message</label><input type="text" name="message" id="message" required></p>
+        <button id="fix" type="button">決定</button>
+      </form>
+    </div>
 
   <!-- ▼LINE風ここから -->
   <div class="line__container">
@@ -22,7 +31,6 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
-
     <!-- ▼会話エリア scrollを外すと高さ固定解除 -->
     <div class="line__contents scroll">
 
@@ -35,7 +43,7 @@
       <!-- 相手の吹き出し -->
       <div class="line__left">
         <figure>
-          <img src="24526426.jpg" />
+          <img src="images/24526426.jpg" />
         </figure>
         <div class="line__left-text">
           <div class="name">サンタクロース</div>
@@ -75,7 +83,7 @@
       <!-- 相手の吹き出し -->
       <div class="line__left">
         <figure>
-          <img src="24526426.jpg" />
+          <img src="images/24526426.jpg" />
         </figure>
         <div class="line__left-text">
           <div class="name">サンタクロース</div>
@@ -92,7 +100,7 @@
       <!-- 相手の吹き出し -->
       <div class="line__left">
         <figure>
-          <img src="24526426.jpg" />
+          <img src="images/24526426.jpg" />
         </figure>
         <div class="line__left-text">
           <div class="name">サンタクロース</div>
@@ -118,7 +126,7 @@
     <!--　▲会話エリア ここまで -->
   </div>
   <!--　▲LINE風ここまで -->
-
+<script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,42 @@
 /*/////////////////////////////////////////////////
-//LINE風チャット画面(会話方式)を記事に表示する方法
+//LINE風チャット画面(会話方式)を記事に表示
 /////////////////////////////////////////////////*/
+:root{
+  	--background-color: #8CABD8;
+}
+
 body{
   margin: 0;
   padding: 0;
   font-family:-apple-system, BlinkMacSystemFont,"Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
+
+.settings {
+	background-color: var(--background-color);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  z-index: 100;
+  transition :opacity 1s ease-in-out;
+}
 .line__container {
   padding:0;
-  background: #8CABD8;
+	opacity: 0;
+  background:var(--background-color);
   overflow: hidden;
   width: 100%;
   max-width: 450px;
   margin: 20px auto;
   font-size: 90%;
   height: 100vh;
+  transition :opacity 1s ease-in-out;
 }
 
 .title__box{
