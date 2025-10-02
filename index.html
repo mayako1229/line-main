@@ -15,9 +15,9 @@
   <div class="settings">
     <form action="#">
       <p>初期設定</p>
-      <p><label for="child_name">おなまえ</label><input type="text" name="child_name" id="child_name" required></p>
+      <p><label for="child-name">おなまえ</label><input type="text" name="child-name" id="child-name" required></p>
       <p><label for="message">message</label><input type="text" name="message" id="message" required></p>
-      <button id="fix" type="button">決定</button>
+      <button id="fix-button" type="button">決定</button>
     </form>
   </div>
 
@@ -43,79 +43,27 @@
         </figure>
         <div class="line__left-text">
           <div class="name">サンタクロース</div>
-          <div class="text">今年はプレゼントは何が欲しいと言っていますか？</div>
-        </div>
-      </div>
-
-      <!-- 相手の吹き出し -->
-      <div class="line__left">
-        <figure>
-          <img src="images/24526426.jpg" />
-        </figure>
-        <div class="line__left-text">
-          <div class="name">サンタクロース</div>
-          <div class="text">リクエストしてくださいね</div>
-        </div>
-      </div>
-
-      <!-- 自分の吹き出し -->
-      <div class="line__right">
-        <div class="text">スプラトゥーン3の追加パス？が欲しいみたいです</div>
-        <span class="date">既読<br>22:12</span>
-      </div>
-
-      <!-- 相手の吹き出し -->
-      <div class="line__left">
-        <figure>
-          <img src="images/24526426.jpg" />
-        </figure>
-        <div class="line__left-text">
-          <div class="name">サンタクロース</div>
-          <div class="text">わかりました。探しておきますね。</div>
-        </div>
-      </div>
-
-      <!-- 自分の吹き出し -->
-      <div class="line__right">
-        <div class="text">よろしくお願いします。</div>
-        <span class="date">既読<br>22:13</span>
-      </div>
-
-      <!-- 相手の吹き出し -->
-      <div class="line__left">
-        <figure>
-          <img src="images/24526426.jpg" />
-        </figure>
-        <div class="line__left-text">
-          <div class="name">サンタクロース</div>
-          <div class="text">おりこうさんに過ごすように伝えてください。</div>
+          <div class="text" id="santa-chat"></div>
         </div>
       </div>
 
 
-      <!-- 自分の吹き出し -->
-      <div class="line__right">
-        <div class="text">はい、伝えておきます。</div>
-        <span class="date">既読<br>22:13</span>
-      </div>
 
-      <div class="comment__outer">
+      <!-- <div class="comment__outer" id="last-comment">
       
         <div class="comment">
           今年のプレゼント受付は終了しました。<br>
           これ以上メッセージは送信できません
         </div>
-      </div>
-
-
+      </div> -->
     </div>
       <!--　▲会話エリア ここまで -->
       <div class="chat__outer">
         <div class="chat__contents">
           <span>&lt;&nbsp;</span>
           <div class="chat__input">
-            <input type="text" name="chat" class="chat" placeholder="メッセージ入力">
-            <button id="chat" type="button"><span><i class="fa-regular fa-face-smile"></i></span></button>
+            <input type="text" name="chat" class="chat" id="chat" placeholder="メッセージ入力">
+            <button id="chat-button" type="button"><span><i class="fa-regular fa-face-smile"></i></span></button>
           </div>
           <span><i class="fa-solid fa-microphone"></i></span>
         </div>
