@@ -30,7 +30,7 @@ chatButton.addEventListener('click',()=>{
     //チャット内容の取得し、吹き出しに表示
     const chat = document.getElementById('chat');
     if(chat.value==''){
-        return;
+        return;     
     }
     const myElement = document.createElement('div');
     myElement.setAttribute('class','line__right');
