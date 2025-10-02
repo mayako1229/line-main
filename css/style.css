@@ -84,7 +84,7 @@ body{
   max-width: 450px;
   margin: 0 auto; 
   font-size: 90%;
-  height: 100vh;
+
   transition :opacity 1s ease-in-out;
 }
 
@@ -115,11 +115,10 @@ body{
   display: flex;
   flex-direction: column;
   line-height: 135%;
-  
+    height:calc(100vh - 150px) ;
 }
 
-.line__container .scroll {
-  height: 100vh;
+.line__container.scroll {
   overflow-y: scroll;
 }
 
@@ -293,4 +292,5 @@ align-self: end;
   border:none;
   width: 85%;
   outline: none;
+  font-size:1rem;
 }
