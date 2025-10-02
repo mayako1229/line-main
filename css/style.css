@@ -39,13 +39,21 @@ body{
 
 
 .settings input,.settings textarea{
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px;
   border:none;
   width: 100%;
+  font-size: 1.2rem;
 }
 .settings textarea{
   height: 5em;
+}
+.settings ::placeholder {
+   color: #aaa;
+}
+.error{
+  font-size: 0.9em;
+  color:#a60a0a;
 }
 .settings__title{
   font-size:1.5em;

@@ -9,6 +9,15 @@ let message;
 fixButton.addEventListener('click',()=>{
     childName = document.getElementById('child-name').value;
     message = document.getElementById('message').value;
+    if(childName==''){
+        document.getElementById('child-name-error').textContent="お名前を入力して下さい";
+    }
+    if(message==''){
+        document.getElementById('message-error').textContent="メッセージを入力して下さい";        
+    }
+    if(childName==''||message==''){
+        return;
+    } 
     const settings = document.querySelector('.settings');
     settings.style.opacity = '0';
     settings.style.zIndex = '-1';
