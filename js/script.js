@@ -29,6 +29,9 @@ chatButton.addEventListener('click',()=>{
     const minutes = String(date.getMinutes()).padStart(2, '0');
     //チャット内容の取得し、吹き出しに表示
     const chat = document.getElementById('chat');
+    if(chat.value==''){
+        return;
+    }
     const myElement = document.createElement('div');
     myElement.setAttribute('class','line__right');
     myElement.innerHTML='<div class="text">' + chat.value + '</div>';

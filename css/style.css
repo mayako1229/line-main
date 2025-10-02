@@ -79,7 +79,7 @@ body{
   padding:0;
 	opacity: 0;
   background:var(--background-color);
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
   max-width: 450px;
   margin: 0 auto; 
@@ -118,7 +118,7 @@ body{
     height:calc(100vh - 150px) ;
 }
 
-.line__container.scroll {
+.line__contents.scroll {
   overflow-y: scroll;
 }
 
