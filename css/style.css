@@ -123,10 +123,6 @@ body{
   overflow-y: scroll;
 }
 
-/* スタンプ画像最大幅 */
-.line__container .stamp img {
-  max-width:150px;
-}
 
 /* 相手の会話 */
 .line__container .line__left {
