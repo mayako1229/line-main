@@ -33,7 +33,7 @@ body{
   overflow: hidden;
   width: 100%;
   max-width: 450px;
-  margin: 20px auto;
+  margin: 0 auto; 
   font-size: 90%;
   height: 100vh;
   transition :opacity 1s ease-in-out;
@@ -63,8 +63,10 @@ body{
 /* 会話部分 */
 .line__container .line__contents {
   padding: 10px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   line-height: 135%;
+  
 }
 
 .line__container .scroll {
@@ -143,9 +145,9 @@ body{
     display: block;
     margin: 5px 0;
     max-width: 75%;
-    float: right;
+
     margin-right: 15px;
-    clear: both;
+align-self: end;
 }
 
 /* コメントエリア */
@@ -155,6 +157,7 @@ body{
   background-color: #8de055;
   margin: 0;
   margin-left: 80px;
+
 }
 
 /* 吹き出し */
@@ -192,7 +195,7 @@ body{
 }
 
 .comment__outer{
-  clear: both;
+      display: none;
 }
 .comment{
   margin-top: 20px;
@@ -203,4 +206,46 @@ body{
   padding: 10px; 
   font-size: 75%;
   width: 90%;
+}
+
+.chat__outer{
+  margin: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  position: sticky;
+  bottom:0;
+  z-index: 10;
+  display: flex;
+}
+.chat__contents{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} 
+
+.chat__contents span{
+  font-size: 150%;
+  color: #111;
+}
+.chat__input{
+  background-color:#ccc;
+  border-radius: 9999px;
+  width:80%;
+  padding: 10px; 
+  display: flex;
+  justify-content: space-between;
+}
+.chat__input button{
+  border:none;
+  outline: none;
+  background-color:transparent;
+  cursor: pointer;
+}
+.chat{
+  background-color:#ccc;
+  border:none;
+  width: 85%;
+  outline: none;
 }
