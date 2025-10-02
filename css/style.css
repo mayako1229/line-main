@@ -36,7 +36,9 @@ body{
   font-size:1.2em;
   color: #111;
 }
-
+.settings p{
+  margin-bottom: 2px;
+}
 
 .settings input,.settings textarea{
   border-radius: 5px;
@@ -58,8 +60,7 @@ body{
 .settings__title{
   font-size:1.5em;
   color: #111;
-    padding: 0.5em 0;/*上下の余白*/
-  border-top: solid 3px #364e96;/*上線*/
+  padding: 0.5em 0;/*上下の余白*/
   border-bottom: solid 3px #364e96;/*下線*/
 }
 .settings__title span{
@@ -105,8 +106,7 @@ body{
   width: 100%;
   max-width: 450px;
   margin: 0 auto; 
-  font-size: 90%;
-
+  font-size: 1em;
   transition :opacity 1s ease-in-out;
 }
 
@@ -150,12 +150,10 @@ body{
 
 /* 相手の会話 */
 .line__container .line__left {
-      width: 100%;
     position: relative;
     display: block;
     margin-bottom: 5px;
     max-width: 80%;
-    clear: both;
 }
 
 /* アイコン画像 */

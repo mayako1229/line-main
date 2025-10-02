@@ -1,7 +1,7 @@
 const fixButton = document.getElementById("fix-button");
 const chatButton = document.getElementById("chat-button");
 const lineContents = document.querySelector('.line__contents');
-let chatFlg = 0;
+let firstChatFlg = true;
 let childName;
 let message;
 
@@ -11,9 +11,13 @@ fixButton.addEventListener('click',()=>{
     message = document.getElementById('message').value;
     if(childName==''){
         document.getElementById('child-name-error').textContent="お名前を入力して下さい";
+    }else{
+        document.getElementById('child-name-error').textContent="";
     }
     if(message==''){
         document.getElementById('message-error').textContent="メッセージを入力して下さい";        
+    }else{
+        document.getElementById('message-error').textContent="";        
     }
     if(childName==''||message==''){
         return;
@@ -51,17 +55,7 @@ chatButton.addEventListener('click',()=>{
     setTimeout(() => {
         const santaElement = document.createElement('div');
         santaElement.setAttribute('class','line__left');
-        if(chatFlg==1){
-            //２回目の会話は設定で入れたメッセージを言う
-            santaElement.innerHTML = `
-            <figure><img src="images/24526426.jpg"></figure>
-            <div class="line__left-text">
-                <div class="name">サンタクロース</div>
-                <div class="text">${message}</div>
-            </div>
-            `;
-
-        }else{
+        if(firstChatFlg){
             //一回目の会話
             santaElement.innerHTML = `
             <figure><img src="images/24526426.jpg"></figure>
@@ -70,7 +64,16 @@ chatButton.addEventListener('click',()=>{
                 <div class="text">${childName}がほしいのは${chat.value}だね！<br>わかりました!!<br>じゅんびしておきますね</div>
             </div>
             `;
-            chatFlg++;
+            firstChatFlg=false;
+        }else{
+            //２回目の会話は設定で入れたメッセージを言う
+            santaElement.innerHTML = `
+            <figure><img src="images/24526426.jpg"></figure>
+            <div class="line__left-text">
+                <div class="name">サンタクロース</div>
+                <div class="text">${message}</div>
+            </div>
+            `;
         }
         lineContents.appendChild(santaElement);
         //チャットの内容のクリア
