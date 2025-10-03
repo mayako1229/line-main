@@ -4,7 +4,10 @@ const lineContents = document.querySelector('.line__contents');
 let firstChatFlg = true;
 let childName;
 let message;
-window.scrollTo(0, 0);
+//上に強制的に戻す
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
 //決定ボタン押下
 fixButton.addEventListener('click',()=>{
     childName = document.getElementById('child-name').value;
