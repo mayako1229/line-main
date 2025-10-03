@@ -39,11 +39,10 @@ body{
 .settings p{
   margin-bottom: 2px;
 }
-
 .settings input,.settings textarea{
   border-radius: 5px;
   padding: 10px;
-  border:none;
+  border: none;
   width: 100%;
   font-size: 1.2rem;
 }
@@ -51,7 +50,7 @@ body{
   height: 5em;
 }
 .settings ::placeholder {
-   color: #aaa;
+  color: #aaa;
 }
 .error{
   font-size: 0.9em;
@@ -139,15 +138,11 @@ body{
   display: flex;
   flex-direction: column;
   line-height: 135%;
-  height:calc(100vh - 116px) ;
+  height:calc(100vh - 116px); /* 画面の高さからヘッダー、フッター分を引く */
 }
-
-
 .line__contents.scroll {
   overflow-y: scroll;
 }
-
-
 /* 相手の会話 */
 .line__container .line__left {
     position: relative;

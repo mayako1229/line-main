@@ -7,25 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
-
 </head>
 
 <body>
-
   <div class="settings">
     <form action="#">
       <p class="settings__title">サンタとLINE<span><i class="fa-solid fa-comment-dots"></i></span></p>
       <p>
         <label for="child-name">おなまえ</label>
-        <br><input type="text" name="child-name" id="child-name" placeholder="〇〇ちゃんと愛称で入力" required>
+        <br><input type="text" name="child-name" id="child-name" placeholder="〇〇ちゃんと愛称で入力" >
         <div class="error" id="child-name-error"></div>
       </p>
       <p>
         <label for="message">message</label><br>
-        <textarea name="message" id="message"  placeholder="「ならいごとがんばってね」などサンタさんからのセリフを入力" required></textarea>
+        <textarea name="message" id="message"  placeholder="「ならいごとがんばってね」などサンタさんからのセリフを入力" ></textarea>
         <div class="error" id="message-error"></div>
       </p>
-      <button id="fix-button" type="button" class="button">決定</button>
+      <p><button id="fix-button" type="button" class="button">決定</button></p>
     </form>
   </div>
 
@@ -42,8 +40,6 @@
     </div>
     <!-- ▼会話エリア scrollを外すと高さ固定解除 -->
     <div class="line__contents scroll">
-
-
       <!-- 相手の吹き出し -->
       <div class="line__left">
         <figure>
@@ -54,18 +50,8 @@
           <div class="text" id="santa-chat"></div>
         </div>
       </div>
-
-
-
-      <!-- <div class="comment__outer" id="last-comment">
-      
-        <div class="comment">
-          今年のプレゼント受付は終了しました。<br>
-          これ以上メッセージは送信できません
-        </div>
-      </div> -->
     </div>
-      <!--　▲会話エリア ここまで -->
+    <!--　▲会話エリア ここまで -->
       <div class="chat__outer">
         <div class="chat__contents">
           <span>&gt;</span>
