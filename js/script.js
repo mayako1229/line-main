@@ -4,7 +4,7 @@ const lineContents = document.querySelector('.line__contents');
 let firstChatFlg = true;
 let childName;
 let message;
-
+window.scrollTo(0, 0);
 //決定ボタン押下
 fixButton.addEventListener('click',()=>{
     childName = document.getElementById('child-name').value;

@@ -138,7 +138,7 @@ body{
   display: flex;
   flex-direction: column;
   line-height: 135%;
-  height:calc(100dvh - 116px); /* 画面の高さからヘッダー、フッター分を引く */
+  height:calc(100vh - 116px); /* 画面の高さからヘッダー、フッター分を引く */
 }
 .line__contents.scroll {
   overflow-y: scroll;
