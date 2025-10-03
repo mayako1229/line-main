@@ -65,9 +65,9 @@ chatButton.addEventListener('click',()=>{
             santaElement.innerHTML = `
             <figure><img src="images/24526426.jpg"></figure>
             <div class="line__left-text">
-                <div class="name">サンタクロース</div>
                 <div class="text">${childName}がほしいのは${chatVal}だね！<br>わかりました🎅<br>じゅんびしておきますね</div>
             </div>
+            <span class="date">${hours}:${minutes}</span>
             `;
             firstChatFlg = false;
         } else {
@@ -75,9 +75,9 @@ chatButton.addEventListener('click',()=>{
             santaElement.innerHTML = `
             <figure><img src="images/24526426.jpg"></figure>
             <div class="line__left-text">
-                <div class="name">サンタクロース</div>
                 <div class="text">${message}</div>
             </div>
+            <span class="date">${hours}:${minutes}</span>
             `;
         }
         lineContents.appendChild(santaElement);

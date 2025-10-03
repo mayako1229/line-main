@@ -138,15 +138,16 @@ body{
   display: flex;
   flex-direction: column;
   line-height: 135%;
-  height:calc(100vh - 116px); /* 画面の高さからヘッダー、フッター分を引く */
+  height:calc(100dvh - 116px); /* 画面の高さからヘッダー、フッター分を引く */
 }
 .line__contents.scroll {
   overflow-y: scroll;
 }
 /* 相手の会話 */
 .line__container .line__left {
-    position: relative;
-    display: block;
+    /* position: relative; */
+    /* display: block; */
+    display: flex;
     margin-bottom: 5px;
     max-width: 80%;
 }
@@ -154,9 +155,9 @@ body{
 /* アイコン画像 */
 .line__container .line__left figure {
     width: 30px;
-    position: absolute;
+    /* position: absolute; */
     top: 15px;
-    left: 0;
+    /* left: 0; */
     padding: 0;
     margin: 0;
 }
@@ -169,7 +170,7 @@ body{
 }
 
 .line__container .line__left .line__left-text {
-  margin-left: 40px;
+  margin-left: 7px;
 }
 
 .line__container .line__left .line__left-text .name {
@@ -177,6 +178,13 @@ body{
   color: #ffffff;
 }
 
+.line__container .line__left .date {
+  align-self: flex-end;
+  font-size: 70%;
+  line-height: 1.3;
+  color: #333;
+  padding-left: 3px;
+}
 /* コメントエリア */
 .line__container .line__left .text {
   margin: 0;
@@ -194,9 +202,9 @@ body{
   width: 0;
   height: 0;
   left: -10px;
-  top: 10px;
+  top: 6px;
   border-right: 20px solid #ffffff;
-  border-top: 10px solid transparent;
+  /* border-top: 10px solid transparent; */
   border-bottom: 10px solid transparent;
 }
 
@@ -227,9 +235,9 @@ body{
   width: 0;
   height: 0;
   right: -10px;
-  top: 10px;
+  top: 6px;
   border-left: 20px solid #8de055;
-  border-top: 10px solid transparent;
+  /* border-top: 10px solid transparent; */
   border-bottom: 10px solid transparent;
 }
 
