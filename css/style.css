@@ -15,6 +15,8 @@ body{
   -ms-overflow-style: none;
   /*スクロールバー非表示（Firefox）*/
   scrollbar-width: none;
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* modern browsers */
 }
 
 .settings {
