@@ -4,10 +4,6 @@ const lineContents = document.querySelector('.line__contents');
 let firstChatFlg = true;
 let childName;
 let message;
-//上に強制的に戻す
-window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-});
 //決定ボタン押下
 fixButton.addEventListener('click',()=>{
     childName = document.getElementById('child-name').value;
@@ -34,21 +30,24 @@ fixButton.addEventListener('click',()=>{
     //サンタの最初のセリフのセット
     const santaChat = document.getElementById('santa-chat');
     santaChat.textContent = childName + '、ことしのプレゼントはなにがほしいっていってますか？' 
+    //上に強制的に戻す
+    window.scrollTo(0, 0);
 
 });
 
 //チャットボタン押下
 chatButton.addEventListener('click',()=>{
-    //時刻の取得
+    //現在時刻の取得
     let date = new Date();
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
-    //チャット内容の取得し、吹き出しに表示
+    //チャット内容の取得
     const chat = document.getElementById('chat');
     const chatVal = chat.value;
     if(chatVal == ''){
         return;     
     }
+    //吹き出しに表示
     const myElement = document.createElement('div');
     myElement.setAttribute('class','line__right');
     myElement.innerHTML = `
@@ -58,11 +57,27 @@ chatButton.addEventListener('click',()=>{
     lineContents.appendChild(myElement);
     //チャットの内容のクリア
     chat.value = '';
-
-    //サンタのセリフは一秒後に表示
+    
+    //サンタのセリフ
+    const santaElement = document.createElement('div');
+    santaElement.setAttribute('class','line__left');
+    //入力中のアニメーション
+    const typingHTML = `
+    <div class="bubble">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    `;
+    santaElement.innerHTML = `
+    <figure><img src="images/24526426.jpg"></figure>
+    <div class="line__left-text">
+        <div class="text">${typingHTML}</div>
+    </div>
+    `;
+    lineContents.appendChild(santaElement);
+    
     setTimeout(() => {
-        const santaElement = document.createElement('div');
-        santaElement.setAttribute('class','line__left');
         if(firstChatFlg){
             //一回目の会話
             santaElement.innerHTML = `
@@ -83,9 +98,9 @@ chatButton.addEventListener('click',()=>{
             <span class="date">${hours}:${minutes}</span>
             `;
         }
-        lineContents.appendChild(santaElement);
+       
         
-    }, 1000); // 1秒後に表示
+    }, 2000); // 2秒後に表示
     
 
 });
