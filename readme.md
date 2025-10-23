@@ -48,4 +48,4 @@ LINEでサンタさんがお子さんの名前を呼び掛けてくれて、サ�
 ## 使い方
 1. リポジトリをクローンまたはダウンロードします。
    ```bash
-   git clone https://github.com/mayako1229/santa-line.git
+   git clone https://github.com/mayako1229/line-main.git
